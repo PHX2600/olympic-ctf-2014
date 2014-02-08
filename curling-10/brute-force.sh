@@ -10,7 +10,7 @@ for i in {0..255}; do
 
     if [[ RESPONSE != 200 ]]; then
 
-        echo curl -g $URL
+        echo $(curl -g $URL)
 
     fi
 
