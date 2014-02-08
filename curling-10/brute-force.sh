@@ -8,7 +8,7 @@ for i in {0..255}; do
 
     RESPONSE=$(curl -sL -o /dev/null -w "%{http_code}" -g $URL)
 
-    if [[ RESPONSE != 200 ]]; then
+    if [[ $RESPONSE != "200" ]]; then
 
         echo $(curl -g $URL)
 
