@@ -6,15 +6,15 @@ for i in {0..255}; do
 
     URL="http://[2a02:6b8:0:141f:fea9:d5ff:fed5:${HEX}01]"
 
-    RESPONSE=$(curl -sL -o /dev/null -w "%{http_code}" -g <url>)
+    RESPONSE=$(curl -sL -o /dev/null -w "%{http_code}" -g $URL)
 
     if [[ RESPONSE != 200 ]]; then
 
-        echo
+        curl -g $URL
 
     fi
 
-    OUT=$(curl -g "http://[2a02:6b8:0:141f:fea9:d5ff:fed5:${i}01]")
+    OUT=$()
 
     echo "${i} :: ${OUT}"
 
